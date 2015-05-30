@@ -1,30 +1,25 @@
 // Default JavaScript Functions and Initiations
 $(document).ready(function() {
+  var apiEp = 'http://private-6e916-medigochallenges.apiary-mock.com/'
+  var allClinics = sendRequest('clinics')
 
-  // Retrieve clinic
-  var request = new XMLHttpRequest();
-  var endpoint = 'http://private-6e916-medigochallenges.apiary-mock.com/'
-// Event monitoring
-request.addEventListener("load", reqComplete, false);
-request.addEventListener("error", reqError, false);
-function reqError(evt) {
-	console.log("An error occurred.")
+  for (var i = 0; i <= allClinics.length - 1; i++) {
+  $('#testarea').append('<div>'+allClinics[i]+'</div>')
+  }
+
+
+// Helper
+// Generic getter
+
+function sendRequest(_path) {
+  req = new XMLHttpRequest()
+  req.open('GET', apiEp+_path, false)
+  req.onreadystatechange = function() {
+    if (this.readyState === 4) {
+      results = JSON.parse(this.response)
+    }
+  }
+  req.send()
+  return results
 }
-function reqComplete(evt) {
-	console.log("The request was completed.")
-}
-
-request.open('GET', endpoint+'clinics');
-
-  //Ajax callback
-request.onreadystatechange = function() {
-	if (this.readyState === 4) {
-		// console.log('Status:', this.status);
-		// console.log('Headers:', this.getAllResponseHeaders());
-		// console.log('Body:', this.responseText);
-		json = JSON.parse(this.responseText)
-    console.log(json)
-	}
-  };
-  request.send();
 }); // end document ready
