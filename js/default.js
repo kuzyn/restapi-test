@@ -1,28 +1,54 @@
 // Default JavaScript Functions and Initiations
 $(document).ready(function() {
-  var apiEp = 'http://private-6e916-medigochallenges.apiary-mock.com/'
-  var clinicIndex = sendRequest('clinics')
+var apiEp = 'http://private-6e916-medigochallenges.apiary-mock.com/'
+var queryPath = apiEp+'clinics'
 
-  for (var i = 0; i <= clinicIndex.length - 1; i++) {
-  $('#testarea').append('<div id="clinic-'+clinicIndex[i]+'">'+clinicIndex[i]+'</div>')
-  clinicProperties = sendRequest('clinics/'+clinicIndex[i])
-  $('#clinic-'+clinicIndex[i]).append(clinicProperties['name'])
-  $('#clinic-'+clinicIndex[i]).append(clinicProperties['url'])
-  }
-
-
-// Helper
-// Generic getter
-
-function sendRequest(_path) {
-  req = new XMLHttpRequest()
-  req.open('GET', apiEp+_path, false)
-  req.onreadystatechange = function() {
-    if (this.readyState === 4) {
-      results = JSON.parse(this.response)
-    }
-  }
-  req.send()
-  return results
+// Helpers
+function populateClinicDiv(_object) {
+  $('#listing').append('<div id="clinic-'+_object.id+'"class="clinic-wrapper col-4">'+_object.name+'</div>')
+  var divId = '#clinic-'+_object.id
+  var content =
+  '<h4>'+
+  _object.name+
+  '</h4>'+
+  '<h5>'+
+  _object.score+
+  '</h5>'+
+  '<p>'+
+  _object.desc+
+  '</p>'+
+  '<img class="col-12" src="'+_object.img+'">'
+  // $(divId).hide()
+  $(divId).html(content)
+  // $(divId).fadeIn("fast")
 }
+
+// Error logging
+function reqError() {
+  console.error(this.statusText);
+}
+
+// Main fetching function
+function sendRequest(_path, _cb) {
+  req = new XMLHttpRequest()
+  req.onerror = reqError
+  req.callback = _cb
+  req.open('GET', _path, true) // This obv. makes the request inordered
+  req.onreadystatechange = function() {
+      if (this.readyState === 4) {
+        if(this.status === 200) {
+          this.callback(JSON.parse(this.responseText))
+          }
+      }
+  }
+  req.send(null)
+}
+
+// Where the magic happens...
+sendRequest(queryPath, function (_response) { // Callback on clinic list to iterate through them
+  for (var i = 0; i <= _response.length - 1; i++) {
+    sendRequest(queryPath+'/'+_response[i], populateClinicDiv) // On 200 of each clinic, call the populateClinicDiv
+  }
+})
+
 }); // end document ready
