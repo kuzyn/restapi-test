@@ -1,10 +1,13 @@
 // Default JavaScript Functions and Initiations
 $(document).ready(function() {
   var apiEp = 'http://private-6e916-medigochallenges.apiary-mock.com/'
-  var allClinics = sendRequest('clinics')
+  var clinicIndex = sendRequest('clinics')
 
-  for (var i = 0; i <= allClinics.length - 1; i++) {
-  $('#testarea').append('<div>'+allClinics[i]+'</div>')
+  for (var i = 0; i <= clinicIndex.length - 1; i++) {
+  $('#testarea').append('<div id="clinic-'+clinicIndex[i]+'">'+clinicIndex[i]+'</div>')
+  clinicProperties = sendRequest('clinics/'+clinicIndex[i])
+  $('#clinic-'+clinicIndex[i]).append(clinicProperties['name'])
+  $('#clinic-'+clinicIndex[i]).append(clinicProperties['url'])
   }
 
 
