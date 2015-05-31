@@ -5,9 +5,16 @@ var queryPath = apiEp+'clinics'
 
 // Helpers
 function populateClinicDiv(_object) {
-  $('#listing').append('<div id="clinic-'+_object.id+'"class="clinic-wrapper col-4">'+_object.name+'</div>')
+  var proceduresList = []
+  for (var i = 0; i < _object.procedures.length; i++) {
+  cleanProcedures = _object.procedures[i].name.split(' ').join('_').toLowerCase() //rom
+  proceduresList.push(cleanProcedures)
+  }
+    
+  $('.grid').append('<div id="clinic-'+_object.id+'" class="grid-item col-12 col-tablet-6 col-desktop-4 col-hd-3 '+proceduresList.join(' ')+'">'+_object.name+'</div>')
   var divId = '#clinic-'+_object.id
   var content =
+  //'<img class="col-12" src="'+_object.img+'">'+
   '<h4>'+
   _object.name+
   '</h4>'+
@@ -16,11 +23,8 @@ function populateClinicDiv(_object) {
   '</h5>'+
   '<p>'+
   _object.desc+
-  '</p>'+
-  '<img class="col-12" src="'+_object.img+'">'
-  // $(divId).hide()
+  '</p>'
   $(divId).html(content)
-  // $(divId).fadeIn("fast")
 }
 
 // Error logging
@@ -50,5 +54,4 @@ sendRequest(queryPath, function (_response) { // Callback on clinic list to iter
     sendRequest(queryPath+'/'+_response[i], populateClinicDiv) // On 200 of each clinic, call the populateClinicDiv
   }
 })
-
 }); // end document ready

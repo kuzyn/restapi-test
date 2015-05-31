@@ -21,16 +21,23 @@
 <body>
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-<div class="container">
-<div>
-  <h2>
-  what is up medical wrldsss
-  </h2>
-  <div id="listing">
+
+<div class="top-banner">
+  <div class="container-full">
+  <h1 class="no-margin">dem buuuuugs</h1>
+  <div class="row text-center filter-button-group">
+    <div class="col-3"><a href="#" data-filter="*" class="button">none</a></div>
+    <div class="col-3"><a href="#" data-filter=".hip_replacement" class="button">hip_replacement</a></div>
+    <div class="col-3"><a href="#" data-filter=".consultation" class="button">consultation</a></div>
+    <div class="col-3"><a href="#" data-filter=".crowns" class="button">crowns</a></div>
+  </div>
   </div>
 </div>
-</div>
 
+<div class="container">
+  <div class="grid">
+  </div>
+</div>
 <!-- Google Analytics - Update UA-XXXXX-X ID -->
 <!--<script>
   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -41,5 +48,24 @@
   ga('create','UA-XXXXX-X');ga('send','pageview');
 </script> -->
 <script src="js/default.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.js"></script>
+<script type="text/javascript">
+
+//##########################
+// $( document ).ready( function() {
+// // init Isotope
+// var $container = $('.grid').isotope({
+//   filter: '.crowns'
+// });
+
+// // filter items on button click
+// $('.filter-button-group').on( 'click', 'a', function() {
+//   var filterValue = $(this).attr('data-filter')
+//   $container.isotope({ filter: filterValue })
+// });
+//##########################
+
+})
+</script>
 </body>
 </html>
