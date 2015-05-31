@@ -1001,12 +1001,21 @@ body {
 .menu {
   background-color: rgba(255, 0, 0, 0.5);
 }
-.top-banner {
-  height: 50px;
+.top-wrapper {
   background-color: rgba(128, 0, 128, 0.5);
+  min-height: 4em;
 }
 .thumbs {
   min-height: 200px;
+}
+.medigo-title {
+  font-size: 4em;
+  padding-top: 0.25em;
+  color: white;
+}
+.grid-item {
+  background-color: rgba(128, 128, 128, 0.3);
+  border: 10px solid rgba(128, 128, 128, 0.5);
 }
 .no-margin {
   margin: 0;

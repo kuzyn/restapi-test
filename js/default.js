@@ -8,28 +8,47 @@ var $isoContainer = $('#isoContainer').isotope({
   }
 });
 
+// Populate Array(object.property)
+function populateArray(_o) {
+  var array = []
+  for (var i = 0; i < _o.length; i++) {
+  cleanProcedures = _o[i].name.split(' ').join('_').toLowerCase() //rom
+  array.push(cleanProcedures)
+  }
+  return array
+}
+
 // Helpers
 function populateClinicDiv(_object) {
-  var proceduresList = []
-  for (var i = 0; i < _object.procedures.length; i++) {
-  cleanProcedures = _object.procedures[i].name.split(' ').join('_').toLowerCase() //rom
-  proceduresList.push(cleanProcedures)
-  }
-  $isoContainer.append('<div id="clinic-'+_object.id+'" class="grid-item col-12 col-tablet-6 col-desktop-4 col-hd-3 '+proceduresList.join(' ')+'">'+_object.name+'</div><div class="cf"></div>')
-  var $divId = $('#clinic-'+_object.id)
-  var content =
-  '<img class="col-12 thumbs" src="'+_object.img+'">'+
-  '<h4 class="name">'+
-  _object.name+
-  '</h4>'+
-  '<h5>'+
-  _object.score+
-  '</h5>'+
-  '<p>'+
-  _object.desc+
-  '</p>'
-  $divId.html(content)
-  $isoContainer.isotope('appended', $divId)
+  //object properties
+  clinicName = _object.name
+  clinicId = _object.id
+  clinicUrl = _object.url
+  clinicDesc = _object.desc
+  clinicImg = _object.img
+  clinicScore = _object.score
+  clinicAccreditation = _object.accreditations
+  clinicProcedures = populateArray(_object.procedures).join(' ')
+
+  //html
+  itemId = 'clinic-'+clinicId
+  itemDiv  = '<div id='+itemId+' class="grid-item col-12 col-tablet-6 col-desktop-4 col-hd-3 '+clinicProcedures+'"></div>'
+  $isoContainer.append(itemDiv)
+  // $isoContainer.append('<div id="clinic-'+clinicId+'" class="grid-item col-12 col-tablet-6 col-desktop-4 col-hd-3 '+clinicProcedures+'">'+_object.name+'</div><div class="cf"></div>')
+  // var $divId = $('#clinic-'+clinicId)
+  // var content =
+  // '<img class="col-12 thumbs" src="'+_object.img+'">'+
+  // '<h4 class="name">'+
+  // _object.name+
+  // '</h4>'+
+  // '<h5>'+
+  // 'Score'+_object.score+
+  // '</h5>'+
+  // '<p>'+
+  // _object.desc+
+  // '</p>'
+  $("#"+itemId).html("<p>dem buuuuugs</p>")
+  $isoContainer.isotope('appended', itemId)
   $isoContainer.isotope('layout')
   $isoContainer.isotope({ sortBy : 'name' });
 }
