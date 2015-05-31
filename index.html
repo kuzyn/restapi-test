@@ -35,7 +35,7 @@
 </div>
 
 <div class="container">
-  <div class="grid">
+  <div id="isoContainer">
   </div>
 </div>
 <!-- Google Analytics - Update UA-XXXXX-X ID -->
@@ -51,21 +51,32 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.js"></script>
 <script type="text/javascript">
 
+// var grid = $('.grid').isotope({
+//   itemSelector: '.grid-item'
+// });
+
+// $('.filter-button-group a').click( function() {
+//   var filterValue = $(this).attr('data-filter');
+//   grid.isotope({ filter: filterValue });
+//   console.log("ping")
+// });
+
 //##########################
 // $( document ).ready( function() {
 // // init Isotope
-// var $container = $('.grid').isotope({
-//   filter: '.crowns'
+// var grid = $('.grid').isotope({
+//   itemSelector: '.grid-item'
 // });
 
 // // filter items on button click
-// $('.filter-button-group').on( 'click', 'a', function() {
+// $('.filter-button-group a').click( function() {
 //   var filterValue = $(this).attr('data-filter')
-//   $container.isotope({ filter: filterValue })
+//   grid.isotope({ filter: filterValue })
+//   console.log("ping")
 // });
+// })
 //##########################
 
-})
 </script>
 </body>
 </html>
