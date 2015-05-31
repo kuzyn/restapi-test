@@ -998,8 +998,15 @@ dl:after {
 body {
   background-color: rgba(0, 0, 255, 0.2);
 }
-.top-banner {
+.menu {
   background-color: rgba(255, 0, 0, 0.5);
+}
+.top-banner {
+  height: 50px;
+  background-color: rgba(128, 0, 128, 0.5);
+}
+.thumbs {
+  min-height: 200px;
 }
 .no-margin {
   margin: 0;
