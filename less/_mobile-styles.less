@@ -2,42 +2,82 @@
 // Mobile Custom Styles
 // ==========================================================================
 
+
+// Medigo variables
+@brand-color:									overlay(fade(lime, 60%), blue);
+@brand-color-secondary:                         #FF4545;
+@header-padding:								200px; 
+
 body {
-	background-color: blue;
 }
 
 html {
-    overflow-y: scroll; 
+	overflow-y: scroll; 
+}
+
+#content {
+	padding-top: @header-padding;
+}
+
+.filter-button-group,
+.sort-button-group {
+	padding-bottom: 5px;
 }
 
 #footer {
-	background-color: purple;
+	margin-top: 20px;
+	background-color: @brand-color;
 	opacity: 0;
+	h2 {
+		color: white;
+	}
 }
 
 .grid-item {
 	background-color: fade(grey, 30%);
 	border: 2px solid fade(grey, 50%);
+	z-index: 5;
 }
 
-.thumbs {
-	border: 1px grey solid;
-	min-height: 100px;
-	opacity: 0;
+#header {
+	background-color: @brand-color;
+	width: 100%;
+}
+
+.header-wrapper {
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	height: @header-padding;
 }
 
 #isoContainer {
-	padding: 20px 0 20px 0;
 	opacity: 0;
 }
 
-.loader {
-	height: 100px;
-	padding: 20px;
+.loader { 
+	height: @header-padding;
+	margin-top: @header-padding+@header-padding/4;
+	div {
+		padding: 20px;
+		background-color: @brand-color-secondary !important;
+	}
+}
+
+.medigo-title {
+	a {
+		color: white;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	span {
+		color: @brand-color-secondary;
+		transition: all linear 0.5s;
+	}
 }
 
 .menu {
-	background-color: red;
+	background-color: darken(@brand-color,5%);
 }
 
 .menu {
@@ -49,20 +89,12 @@ html {
 	font-weight: bold;
 }
 
-.medigo-title {
-	color: white;
-	font-weight: bold;
-	span {
-	transition: all linear 0.5s;
-	.animate(1s);
-	}
-}
 
 .medigo-title span:hover {
 	padding-top: 10px;
 	color: fade(white, 50%)
 }
-	
+
 .menu .button {
 	width: 100%;
 	text-align: center;
@@ -77,7 +109,6 @@ html {
 	}
 }
 
-.top-wrapper {
-	background-color: purple;
-	padding-bottom: 25px;
+.thumbs img {
+	border: 1px grey solid;
 }

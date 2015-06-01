@@ -38,7 +38,7 @@ function buildItemHtml(_object) {
 
   //html
   itemId = 'clinic-'+clinicId
-  itemDiv  = '<div id='+itemId+' class="grid-item col-6 col-tablet-6 col-desktop-4 col-hd-3 '+clinicProcedures+'"></div>'
+  itemDiv  = '<div id='+itemId+' class="grid-item col-6 col-tablet-6 col-desktop-4 col-hd-4 '+clinicProcedures+'"></div>'
   $isoContainer.append(itemDiv)
   
 
@@ -121,6 +121,9 @@ $('.sort-button-group a').click( function() {
   $isoContainer.isotope({ sortBy: sortValue })
 });
 
+
+// $(".header-wrapper").sticky({topSpacing:0});
+// $('#sticker').on('sticky-start', function() { console.log("Started"); });
 
 
 // ### Main ###

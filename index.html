@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"> <!-- Compiled from /less/style.css -->
   <link rel="stylesheet" href="bower_components/loaders.css/loaders.css">
   <script src="js/vendor/modernizr.min.js"></script>
   <!--[if lt IE 9 ]>
@@ -22,36 +22,39 @@
   <body>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <div class="top-wrapper">
-      <div class="container">
+    
+    <div class="header-wrapper"> <!-- Header -->
+      <div id="header" class="container">
         <div class="banner">
-          <h1 class="text-center no-margin medigo-title">
-            <span>m</span><span>e</span><span>d</span><span>i</span><span>g</span><span>o</span>
-          </h1>
+          <h1 class="text-center no-margin medigo-title"><a href="#" class="">
+            medi<span class="font-bulger">go</span>
+          </h1></a>
         </div>
-        <div class="menu row">
-          <div class="filter-button-group col-12 col-tablet-6 col-desktop-6 col-hd-4">
-            <h3 class="menu-title uppercase">Filter by</h3>
-            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter="*" class="button">(all)</a></div>
+        <div class="menu row"> <!-- Menu -->
+          <div class="filter-button-group col-12 col-tablet-6 col-desktop-6 col-hd-4"> <!-- Filter -->
+            <h3 class="menu-title no-margin no-padding uppercase">Filter by</h3>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter="*" class="button">(none)</a></div>
             <div class="h6 no-margin no-padding col-6"><a href="#" data-filter=".hip_replacement" class="button">Hip Replacement</a></div>
             <div class="h6 no-margin no-padding col-6"><a href="#" data-filter=".consultation" class="button">Consultation</a></div>
             <div class="h6 no-margin no-padding col-6"><a href="#" data-filter=".crowns" class="button">Crowns</a>
             </div>
-          </div>
-          <div class="sort-button-group col-12 col-tablet-6 col-desktop-6 col-hd-4 right">
-            <h3 class="menu-title uppercase">Sort by</h3>
-            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter="name" class="button">Name</a></div>
-            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter="score" class="button">Score</a></div>
-          </div>
-        </div>
+          </div> <!-- /Filter -->
+          <div class="sort-button-group col-12 col-tablet-6 col-desktop-6 col-hd-4 right"> <!-- Sort -->
+            <h3 class="menu-title col-6 col-tablet-12 col-desktop-12 col-hd-12 no-margin no-padding uppercase">Sort by</h3>
+            <div class="h6 no-margin no-padding col-3 col-tablet-6 col-desktop-6 col-hd-6"><a href="#" data-filter="name" class="button">Name</a></div>
+            <div class="h6 no-margin no-padding col-3 col-tablet-6 col-desktop-6 col-hd-6"><a href="#" data-filter="score" class="button">Score</a></div>
+          </div> <!-- /Sort -->
+        </div> <!-- End Menu -->
       </div>
-    </div>
-    <div class="loader text-center loader-inner ball-pulse">
+    </div><!-- End Header -->
+
+    <div class=" col-6 push-3 loader text-center loader-inner ball-pulse">
       <div></div>
       <div></div>
       <div></div>
-    </div>
-    <div class="container">
+    </div> 
+
+    <div id="content" class="container">
       <div id="isoContainer">
       </div>
     </div>
@@ -59,9 +62,8 @@
       <div id="footer" class="text-center">
         <h2 class="no-padding no-margin">footer &copy;</h2>
       </div>
-    <!-- <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script> -->
+
     <script src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
-    <script src="bower_components/sticky/jquery.sticky.js"></script>
     <script src="js/default.js"></script>
 
     <!-- Google Analytics - Update UA-XXXXX-X ID -->
