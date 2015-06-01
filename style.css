@@ -996,26 +996,70 @@ dl:after {
   }
 }
 body {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: blue;
 }
-.menu {
-  background-color: rgba(255, 0, 0, 0.5);
+html {
+  overflow-y: scroll;
 }
-.top-wrapper {
-  background-color: rgba(128, 0, 128, 0.5);
-  min-height: 4em;
-}
-.thumbs {
-  min-height: 200px;
-}
-.medigo-title {
-  font-size: 4em;
-  padding-top: 0.25em;
-  color: white;
+#footer {
+  background-color: purple;
+  opacity: 0;
 }
 .grid-item {
   background-color: rgba(128, 128, 128, 0.3);
-  border: 10px solid rgba(128, 128, 128, 0.5);
+  border: 2px solid rgba(128, 128, 128, 0.5);
+}
+.thumbs {
+  border: 1px grey solid;
+  min-height: 100px;
+  opacity: 0;
+}
+#isoContainer {
+  padding: 20px 0 20px 0;
+  opacity: 0;
+}
+.loader {
+  height: 100px;
+  padding: 20px;
+}
+.menu {
+  background-color: red;
+}
+.menu {
+  padding-bottom: 15px;
+}
+.menu-title {
+  color: white;
+  font-weight: bold;
+}
+.medigo-title {
+  color: white;
+  font-weight: bold;
+}
+.medigo-title span {
+  transition: all linear 0.5s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.medigo-title span:hover {
+  padding-top: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.menu .button {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.no-js #footer,
+.no-js #isoContainer,
+.no-js .thumbs {
+  opacity: 0;
+}
+.top-wrapper {
+  background-color: purple;
+  padding-bottom: 25px;
 }
 .no-margin {
   margin: 0;

@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "isotope": "~2.2.0",
-    "imagesloaded": "~3.1.8",
-    "unveil": "~1.3.0"
+    "loaders.css": "~0.1.1",
+    "sticky": "~1.0.1"
   }
 }

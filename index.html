@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Samuel Cousin -- MEDIGO TEST</title>
+  <title>Samuel Cousin -- MEDIGO Challenge</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,82 +13,65 @@
   <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bower_components/loaders.css/loaders.css">
   <script src="js/vendor/modernizr.min.js"></script>
   <!--[if lt IE 9 ]>
     <script src="js/ie.min.js"></script>
-  <![endif]-->
-</head> 
-<body>
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-<!-- <div class="container-full">
-  <div class="top-banner">
-  <div class="menu">
-  <div class="text-center row filter-button-group">
-    <div class="col-tablet-3"><a href="#" data-filter="*" class="button">none</a></div>
-    <div class="col-tablet-3"><a href="#" data-filter=".hip_replacement" class="button">hip_replacement</a></div>
-    <div class="col-tablet-3"><a href="#" data-filter=".consultation" class="button">consultation</a></div>
-    <div class="col-tablet-3"><a href="#" data-filter=".crowns" class="button">crowns</a></div>
-  </div>
-  </div>
-  </div>
-</div> -->
-
-<div class="top-wrapper">
-  <div class="container-full top">
-    <div>
-      <h1 class="text-center no-margin medigo-title">shaft</h1>
+    <![endif]-->
+  </head> 
+  <body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <div class="top-wrapper">
+      <div class="container">
+        <div class="banner">
+          <h1 class="text-center no-margin medigo-title">
+            <span>m</span><span>e</span><span>d</span><span>i</span><span>g</span><span>o</span>
+          </h1>
+        </div>
+        <div class="menu row">
+          <div class="filter-button-group col-12 col-tablet-6 col-desktop-6 col-hd-4">
+            <h3 class="menu-title uppercase">Filter by</h3>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter="*" class="button">(all)</a></div>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter=".hip_replacement" class="button">Hip Replacement</a></div>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter=".consultation" class="button">Consultation</a></div>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter=".crowns" class="button">Crowns</a>
+            </div>
+          </div>
+          <div class="sort-button-group col-12 col-tablet-6 col-desktop-6 col-hd-4 right">
+            <h3 class="menu-title uppercase">Sort by</h3>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter="name" class="button">Name</a></div>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter="score" class="button">Score</a></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-  <div class="container">
-    <div id="isoContainer">
+    <div class="loader text-center loader-inner ball-pulse">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-  </div>
-<!-- Google Analytics - Update UA-XXXXX-X ID -->
-<!--<script>
-  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-  e.src='//www.google-analytics.com/analytics.js';
-  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  ga('create','UA-XXXXX-X');ga('send','pageview');
-</script> -->
-<script src="js/default.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.js"></script>
-<!-- <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script> -->
-<!-- <script src="bower_components/unveil/jquery.unveil.min.js"></script> -->
+    <div class="container">
+      <div id="isoContainer">
+      </div>
+    </div>
 
-<script type="text/javascript">
+      <div id="footer" class="text-center">
+        <h2 class="no-padding no-margin">footer &copy;</h2>
+      </div>
+    <!-- <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script> -->
+    <script src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+    <script src="bower_components/sticky/jquery.sticky.js"></script>
+    <script src="js/default.js"></script>
 
-// var grid = $('.grid').isotope({
-//   itemSelector: '.grid-item'
-// });
-
-// $('.filter-button-group a').click( function() {
-//   var filterValue = $(this).attr('data-filter');
-//   grid.isotope({ filter: filterValue });
-//   console.log("ping")
-// });
-
-//##########################
-// $( document ).ready( function() {
-// // init Isotope
-// var grid = $('.grid').isotope({
-//   itemSelector: '.grid-item'
-// });
-
-// // filter items on button click
-// $('.filter-button-group a').click( function() {
-//   var filterValue = $(this).attr('data-filter')
-//   grid.isotope({ filter: filterValue })
-//   console.log("ping")
-// });
-// })
-//##########################
-
-</script>
+    <!-- Google Analytics - Update UA-XXXXX-X ID -->
+    <!--<script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script> -->
 </body>
 </html>
