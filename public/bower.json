@@ -1,0 +1,21 @@
+{
+  "name": "medigo-test",
+  "version": "0.0.1",
+  "authors": [
+    "jsnowball <hello@samuelcousin.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://samuelcousin.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "isotope": "~2.2.0",
+    "loaders.css": "~0.1.1"
+  }
+}

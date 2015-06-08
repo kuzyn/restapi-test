@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Samuel Cousin -- MEDIGO Challenge</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+
+  <link rel="stylesheet" href="style.css"> <!-- Compiled from /less/style.css -->
+  <link rel="stylesheet" href="bower_components/loaders.css/loaders.css">
+  <script src="js/vendor/modernizr.min.js"></script>
+  <!--[if lt IE 9 ]>
+    <script src="js/ie.min.js"></script>
+    <![endif]-->
+  </head> 
+  <body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    
+    <div class="header-wrapper"> <!-- Header -->
+      <div id="header" class="container">
+        <div class="banner">
+          <h1 class="text-center no-margin medigo-title"><a href="#" class="">
+            medi<span class="font-bulger">go</span>
+          </h1></a>
+        </div>
+        <div class="menu row"> <!-- Menu -->
+          <div class="filter-button-group col-12 col-tablet-6 col-desktop-6 col-hd-4"> <!-- Filter -->
+            <h3 class="menu-title no-margin no-padding uppercase">Filter by</h3>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter="*" class="button">(none)</a></div>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter=".hip_replacement" class="button">Hip Replacement</a></div>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter=".consultation" class="button">Consultation</a></div>
+            <div class="h6 no-margin no-padding col-6"><a href="#" data-filter=".crowns" class="button">Crowns</a>
+            </div>
+          </div> <!-- /Filter -->
+          <div class="sort-button-group col-12 col-tablet-6 col-desktop-6 col-hd-4 right"> <!-- Sort -->
+            <h3 class="menu-title col-6 col-tablet-12 col-desktop-12 col-hd-12 no-margin no-padding uppercase">Sort by</h3>
+            <div class="h6 no-margin no-padding col-3 col-tablet-6 col-desktop-6 col-hd-6"><a href="#" data-filter="name" class="button">Name</a></div>
+            <div class="h6 no-margin no-padding col-3 col-tablet-6 col-desktop-6 col-hd-6"><a href="#" data-filter="score" class="button">Score</a></div>
+          </div> <!-- /Sort -->
+        </div> <!-- End Menu -->
+      </div>
+    </div><!-- End Header -->
+
+    <div class=" col-6 push-3 loader text-center loader-inner ball-pulse">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div> 
+
+    <div id="content" class="container">
+      <div id="isoContainer">
+      </div>
+    </div>
+
+      <div id="footer" class="text-center">
+        <h2 class="no-padding no-margin">footer &copy;</h2>
+      </div>
+
+    <script src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+    <script src="js/default.js"></script>
+
+    <!-- Google Analytics - Update UA-XXXXX-X ID -->
+    <!--<script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script> -->
+</body>
+</html>

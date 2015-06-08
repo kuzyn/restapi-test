@@ -1,0 +1,114 @@
+// ==========================================================================
+// Mobile Custom Styles
+// ==========================================================================
+
+
+// Medigo variables
+@brand-color:									overlay(fade(lime, 60%), blue);
+@brand-color-secondary:                         #FF4545;
+@header-padding:								200px; 
+
+body {
+}
+
+html {
+	overflow-y: scroll; 
+}
+
+#content {
+	padding-top: @header-padding;
+}
+
+.filter-button-group,
+.sort-button-group {
+	padding-bottom: 5px;
+}
+
+#footer {
+	margin-top: 20px;
+	background-color: @brand-color;
+	opacity: 0;
+	h2 {
+		color: white;
+	}
+}
+
+.grid-item {
+	background-color: fade(grey, 30%);
+	border: 2px solid fade(grey, 50%);
+	z-index: 5;
+}
+
+#header {
+	background-color: @brand-color;
+	width: 100%;
+}
+
+.header-wrapper {
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	height: @header-padding;
+}
+
+#isoContainer {
+	opacity: 0;
+}
+
+.loader { 
+	height: @header-padding;
+	margin-top: @header-padding+@header-padding/4;
+	div {
+		padding: 20px;
+		background-color: @brand-color-secondary !important;
+	}
+}
+
+.medigo-title {
+	a {
+		color: white;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	span {
+		color: @brand-color-secondary;
+		transition: all linear 0.5s;
+	}
+}
+
+.menu {
+	background-color: darken(@brand-color,5%);
+}
+
+.menu {
+	padding-bottom: 15px;
+}
+
+.menu-title {
+	color: white;
+	font-weight: bold;
+}
+
+
+.medigo-title span:hover {
+	padding-top: 10px;
+	color: fade(white, 50%)
+}
+
+.menu .button {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.no-js {
+	#footer,
+	#isoContainer,
+	.thumbs {
+		opacity: 0;
+	}
+}
+
+.thumbs img {
+	border: 1px grey solid;
+}
